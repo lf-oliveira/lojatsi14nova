@@ -84,9 +84,9 @@ CREATE TABLE IF NOT EXISTS `produtos` (
 --
 
 INSERT INTO `produtos` (`id`, `nome`, `detalhes`, `preco`, `id_departamento`) VALUES
-(1, 'Mouse Óptico', NULL, 20.00, 1),
-(2, 'Monitor LED 23"', NULL, 400.00, 1),
-(3, 'TV Plasma 60"', NULL, 5000.00, 2);
+(1, 'Mouse Óptico', 'Mouse', 20.00, 1),
+(2, 'Monitor LED 23"', 'Monitor', 400.00, 1),
+(3, 'TV Plasma 60"', 'Tv' , 5000.00, 2);
 
 -- --------------------------------------------------------
 
