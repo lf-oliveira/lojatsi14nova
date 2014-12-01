@@ -29,17 +29,6 @@
 		case 'listar':
 			select_pedidos();
 			break;
-		case 'incluir':
-			// define o título da página
-			$titulo_pagina = 'Novo Pedido';
-
-			// carrega arquivo com o formulário para incluir novo usuário
-			require_once 'gui/form_pedidos.php';
-			// interrompe o switch...case
-			break;
-		case 'gravar':
-            insert_pedidos();
-			break;
 		case 'excluir':
 			del_pedidos();
 			break;
