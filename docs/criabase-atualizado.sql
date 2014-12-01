@@ -11,6 +11,9 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+INSERT INTO `clientes` (`id`, `nome`, `email`, `senha`) VALUES
+(1, 'felipe', 'felipe@teste.com', '123');
+
 -- --------------------------------------------------------
 
 --
