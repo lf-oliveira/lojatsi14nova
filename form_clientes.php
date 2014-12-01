@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title><?php echo $titulo_pagina; ?></title>
+		<title>Cadastro Clientes</title>
 		<meta charset="utf-8">
-		<style type="text/css">@import "<?php echo URL_BASE; ?>css/estilos.css";</style>
+		<style type="text/css">@import "css/estilos.css";</style>
         <script type="text/javascript" src="functions/goback.js"></script>
 	</head>
 	<body>
 		<div class="container">
-			<h1><?php echo $titulo_pagina; ?></h1>
-			<form method="post" action="<?php echo URL_BASE; ?>clientes.php?acao=gravar">
+			<h1>Cadastro Clientes</h1>
+			<form method="post" action="cadastro.php">
 				<?php
 					// se há um id definido (se é uma alteração)
 					if (isset($id))

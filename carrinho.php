@@ -85,7 +85,7 @@
         		
           			<a href="carrinho.php">Meu Carrinho</a>
           			<a href="login.php">Login</a></li>
-                	<a href="<?php echo URL_BASE.'login.php?acao=sair';?>">Sair</a></li>
+                	<a href="login.php?acao=sair">Sair</a></li>
           			 		
 
         		<h3>Minha Loja<small> TSI14 </small></h3>
