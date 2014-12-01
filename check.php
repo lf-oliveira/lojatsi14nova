@@ -15,10 +15,6 @@
 				<fieldset>
 					<legend>Dados do cliente</legend>
 					<div class="form-group">
-						<label for="nome">Endereço:</label>
-						<input type="text">
-					</div>
-					<div class="form-group">
 						<label for="email">E-mail:</label>
 						<input type="text" name="email" id="email">
 					</div>
