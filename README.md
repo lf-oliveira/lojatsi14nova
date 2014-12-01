@@ -15,3 +15,6 @@ loja para aprendizagem php
 	
 	usuario - admin
 	senha - 123
+	
+	cliente - felipe@teste.com
+	senha - 123
