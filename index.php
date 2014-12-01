@@ -95,31 +95,5 @@
                 </div>
 	</div>
 
-
-<?php
-  
-  if (isset($_SESSION['usuario'])) {
-
-
-              echo "
-                <script>
-                     $('#loginLink').hide();
-                     $('#loginLinkOk').show();
-              </script>
-             ";
-
-          } else if (!isset($_SESSION['usuario'])) {
-
-            echo "
-                <script>
-                     $('#loginLink').show();
-                     $('#loginLinkOk').hide();
-              </script>
-             ";
-
-          }
-
-?>	
-
 </body>
 </html>
