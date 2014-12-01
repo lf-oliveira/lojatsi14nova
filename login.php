@@ -1,12 +1,11 @@
 <?php
 	// importa o código dos scripts
-	require_once 'lib/constantes.php';
+    require_once 'lib/constantes.php';
 	require_once 'lib/database.php';
 	require_once 'lib/funcoes.php';
-    require_once 'functions/func_login.php';   
+    require_once 'lib/acesso.php';   
     
-    session_start();
-	// se uma ação foi informada na URL
+    // se uma ação foi informada na URL
 	if (isset($_GET['acao']))
 	{
 		// captura a ação informada do array superglobal $_GET[]
@@ -23,16 +22,41 @@
 	switch($acao) {
 		case 'identificar':
 
-			require_once('form_login.php');
+			require_once('gui/form_login.php');
 
 			break;
 		case 'autenticar':
-			 logar();
+            $login = $_POST['login'];
+			$senha = $_POST['senha'];
+
+			$consulta = "
+				select * from usuarios where login = '$login'
+			";
+
+			consultar($consulta);
+
+			$usuario = proximo_registro();
+
+			if ($usuario) {
+				if($senha == $usuario['senha']) {
+					$_SESSION['id_usuario'] = $usuario['id'];
+					$_SESSION['nome_usuario'] = $usuario['nome'];
+					$_SESSION['email_usuario'] = $usuario['email'];
+
+					redireciona($_SESSION['request_uri']);
+				}
+				else {
+					$erro = 'A senha informanda não confere.';					
+				}
+			}
+			else {
+				die('O login informado não foi encontrado.');
+			}
 			break;
 		case 'sair':
 			session_destroy();
-        
-			header('Location: index.php');
+
+			header('Location: ../index.php');
 
 			break;
 		default:

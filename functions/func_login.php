@@ -1,25 +1,26 @@
 <?php
 function logar(){
-            $email = $_POST['email'];
+            $login = $_POST['login'];
 			$senha = $_POST['senha'];
 
 			$consulta = "
-				select * from clientes where email = '$email'
+				select * from usuarios where login = '$login'
 			";
 
 			consultar($consulta);
 
-			$clientes = proximo_registro();
+			$usuario = proximo_registro();
 
-			if ($clientes) {
-				if($senha == $clientes['senha']) {
-					$_SESSION['id_clientes'] = $clientes['id'];
-					$_SESSION['email_clientes'] = $clientes['email'];
+			if ($usuario) {
+				if($senha == $usuario['senha']) {
+					$_SESSION['id_usuario'] = $usuario['id'];
+					$_SESSION['nome_usuario'] = $usuario['nome'];
+					$_SESSION['email_usuario'] = $usuario['email'];
 
 					redireciona($_SESSION['request_uri']);
 				}
 				else {
-					die('A senha informanda não confere.');
+					$erro = 'A senha informanda não confere.';					
 				}
 			}
 			else {
@@ -27,3 +28,5 @@ function logar(){
 			}
 }
 ?>
+
+

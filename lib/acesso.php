@@ -2,7 +2,7 @@
 	function verificar_login()
 	{
 		// se há um código de usuário logado na SESSION
-		if(isset($_SESSION['id_clientes'])) {
+		if(isset($_SESSION['id_usuario'])) {
 			return TRUE;
 		}
 		else {
@@ -13,21 +13,23 @@
 				não foi usada a função header("location: ----"); porque quando usamos a função session_start()
 				já são enviados cabeçalhos HTTP para o navegador e isto resultaria em erro.
 			*/
-			redireciona(URL_BASE . 'login.php?acao=identificar');
+			//redireciona(URL_BASE . 'login.php?acao=identificar');
+				header("location:login.php?acao=identificar");
 		}
 	}
 
-	function get_dados_clientes_logado()
+	function get_dados_usuario_logado()
 	{
 		// se não há um usuário logado
-		if(!isset($_SESSION['id_clientes'])) {
+		if(!isset($_SESSION['id_usuario'])) {
 			return FALSE;
 		}
 
 		// monta um vetor com os dados do usuário logado que estão armazenados na SESSION
 		$dados = array();
-		$dados['id_clientes'] = $_SESSION['id_clientes'];
-		$dados['email_clientes'] = $_SESSION['email_clientes'];
+		$dados['id_usuario'] = $_SESSION['id_usuario'];
+		$dados['nome_usuario'] = $_SESSION['nome_usuario'];
+		$dados['email_usuario'] = $_SESSION['email_usuario'];
 
 		return $dados;
 	}
