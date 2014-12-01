@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `itens_pedido` (
 
 CREATE TABLE IF NOT EXISTS `pedidos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `registrado_em` timestamp NULL DEFAULT NULL,
+  `registrado_em` date NULL DEFAULT NULL,
   `situacao` char(1) CHARACTER SET utf8 DEFAULT NULL,
   `id_cliente` int(11) NOT NULL,
   `valor_desconto` decimal(10,2) DEFAULT NULL,
