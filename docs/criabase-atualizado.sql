@@ -110,8 +110,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `login`, `senha`) VALUES
-(1, 'José da Silva', 'zedasilva@gmail.com', 'zedasilva', '123'),
-(5, 'xxx', 'xxx', 'xxxx', 'xxxxx');
+(1, 'Luis Oliveira', 'luis10foliveira@gmail.com', 'admin', '123'),
+
 
 --
 -- Constraints for dumped tables
