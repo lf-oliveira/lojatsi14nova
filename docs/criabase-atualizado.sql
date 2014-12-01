@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `login`, `senha`) VALUES
-(1, 'Luis Oliveira', 'luis10foliveira@gmail.com', 'admin', '123'),
+(1, 'Luis Oliveira', 'luis10foliveira@gmail.com', 'admin', '123');
 
 
 --
