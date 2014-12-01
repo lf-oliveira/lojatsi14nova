@@ -1,9 +1,8 @@
 <?php
 	// importa o código dos scripts
-	require_once '../lib/constantes.php';
-	require_once '../lib/database.php';
-	require_once 'lib/acesso.php';
-    require_once 'functions/func_login.php';   
+    require_once 'lib/constantes.php';
+	require_once 'lib/database.php';	
+    require_once 'lib/acesso.php';   
     
     // se uma ação foi informada na URL
 	if (isset($_GET['acao']))
@@ -26,7 +25,19 @@
 
 			break;
 		case 'autenticar':
-			 logar();
+    $login = $_POST['login'];
+    $entrar = $_POST['entrar'];
+    $senha = $_POST['senha'];
+   
+        if (isset($entrar)) {
+                     
+            $verifica = mysql_query("SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'") or die("erro ao selecionar");
+                if (mysql_num_rows($verifica)<=0){
+                    echo"Login e/ou senha incorretos";
+                    die();              
+        }}
+        
+        header('Location: index.php');
 			break;
 		case 'sair':
 			session_destroy();

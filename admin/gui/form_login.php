@@ -15,14 +15,14 @@
 					<legend>Dados do Usuario</legend>
 					<div class="form-group">
 						<label for="nome">Logon:</label>
-						<input type="text" name="nome" id="nome">
+						<input type="text" name="login" id="login">
 					</div>
 					<div class="form-group">
 						<label for="senha">Senha:</label>
 						<input type="password" name="senha" id="senha">
 					</div>
 					<div class="form-group">
-						<button type="submit">Enviar</button>
+						<button type="submit" value="entrar" id="entrar" name="entrar">Enviar</button>
 					</div>
 				</fieldset>
 			</form>

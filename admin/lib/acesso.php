@@ -14,7 +14,7 @@
 				já são enviados cabeçalhos HTTP para o navegador e isto resultaria em erro.
 			*/
 			//redireciona(URL_BASE . 'login.php?acao=identificar');
-				header("location:login.php?acao=identificar");
+				redireciona('login.php?acao=identificar');
 		}
 	}
 

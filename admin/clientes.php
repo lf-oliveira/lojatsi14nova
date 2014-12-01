@@ -1,13 +1,14 @@
 <?php
     // importa o código dos scripts
-	require_once '../lib/constantes.php';
-	require_once '../lib/database.php';
+	require_once 'lib/constantes.php';
+	require_once 'lib/database.php';
 	require_once 'crud/crud_clientes.php';
-    require_once '../lib/funcoes.php';
+    require_once 'lib/funcoes.php';
 	require_once 'lib/acesso.php';
     require_once 'functions/func_sessao.php';
     
-    sessao();	
+    sessao();
+    
 
 	// se uma ação foi informada na URL
 	if (isset($_GET['acao']))

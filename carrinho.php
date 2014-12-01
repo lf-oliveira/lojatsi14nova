@@ -2,8 +2,8 @@
 
     require_once 'lib/constantes.php';
 	require_once 'lib/database.php';
-	require_once('lib/funcoes.php');
-	require_once('lib/acesso.php');
+	require_once 'lib/funcoes.php';
+	require_once 'lib/acesso.php';
     $totalCompra = 0;
 
 ?>
@@ -83,9 +83,8 @@
 
 	?>
         		
-          			<a href="carrinho.php">Meu Carrinho</a>
-          			<a href="login.php">Login</a></li>
-                	<a href="login.php?acao=sair">Sair</a></li>
+          			<button><a href="carrinho.php">Meu Carrinho</a></button>
+          			<button><a href="login.php?acao=sair">Sair</a></button>
           			 		
 
         		<h3>Minha Loja<small> TSI14 </small></h3>

@@ -1,11 +1,11 @@
 <?php
-	require_once '../lib/constantes.php';
-	require_once '../lib/funcoes.php';
+	require_once 'lib/constantes.php';
+	require_once 'lib/funcoes.php';
 	require_once 'lib/acesso.php';
+    require_once 'lib/database.php';
     require_once 'functions/func_sessao.php';
     
-    sessao();
-	verificar_login();
+    sessao();	
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -26,7 +26,7 @@
 				<li><a href="departamentos.php">Departamentos</a></li>
 				<li><a href="clientes.php">Clientes</a></li>
 				<li><a href="usuarios.php">Usuários</a></li>
-				<li><a href="login.php?acao=sair';?>">Sair</a></li>
+				<li><a href="login.php?acao=sair">Sair</a></li>
 			</nav>
 		</div>
 	</body>

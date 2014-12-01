@@ -8,7 +8,7 @@
     require_once 'functions/func_sessao.php';
     
     sessao();
-	verificar_login();
+	
 
 	// se uma ação foi informada na URL
 	if (isset($_GET['acao']))

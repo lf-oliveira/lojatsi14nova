@@ -9,6 +9,16 @@
 	sessao();
 	verificar_login();
 
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    
+    $verifica = mysql_query("SELECT * FROM clientes WHERE email = '$email' AND senha = '$senha'")
+        or die("erro ao selecionar");
+                if (mysql_num_rows($verifica)<=0){
+                    echo"email ou senha incorreto!!!";
+                    die();              
+        }
+
 	$today = date("d/m/y");
     $data = implode(array_reverse(explode('/', $today)), '-');
     $id_cliente = $_SESSION['id_clientes'];
@@ -40,5 +50,5 @@
 		echo mysql_error();
 	}
 
-    header( "refresh:3;url=/loja" );
+    header( "refresh:2;url=/loja" );
 ?>

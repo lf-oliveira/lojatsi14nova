@@ -22,7 +22,7 @@
 						<input type="password" name="senha" id="senha">
 					</div>
 					<div class="form-group">
-						<button type="submit">Enviar</button>
+						<button type="submit" value="entrar" id="entrar" name="entrar">Enviar</button>
 					</div>
 				</fieldset>
 			</form>
