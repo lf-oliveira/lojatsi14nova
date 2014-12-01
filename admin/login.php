@@ -31,7 +31,7 @@
 		case 'sair':
 			session_destroy();
 
-			header('Location: ../index.php');
+			header( "refresh:url=/loja" );
 
 			break;
 		default:
